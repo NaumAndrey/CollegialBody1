@@ -1,0 +1,5 @@
+!.gitignore
+db.php
+params-local.php
+redis.php
+cache.php

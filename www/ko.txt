@@ -1,0 +1,89 @@
+CREATE TABLE kollegial 
+(
+  id_kollegial INT NOT NULL AUTO_INCREMENT,	
+  type_of_collegial_body VARCHAR (100) NOT NULL,
+  name_organ VARCHAR (100) NOT NULL,
+  title_document VARCHAR (100) NOT NULL,
+  object VARCHAR (100) NOT NULL,
+  number_of_events INT NOT NULL,
+  number_Members INT NOT NULL,
+  PRIMARY KEY (id_kollegial)	
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE members 
+(
+  id_members INT NOT NULL AUTO_INCREMENT,	
+  surname VARCHAR (100) NOT NULL,
+  name VARCHAR (100) NOT NULL,
+  patronymic VARCHAR (100) NOT NULL,
+  position VARCHAR (100) NOT NULL,
+  organization VARCHAR (100) NOT NULL,	
+  phone INT NOT NULL,
+  email VARCHAR (100) NOT NULL,
+  PRIMARY KEY (id_members)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8;  
+
+
+CREATE TABLE organization
+(
+  id_organization INT NOT NULL AUTO_INCREMENT,	
+  full_name_organization VARCHAR (100) NOT NULL,
+  name VARCHAR (100) NOT NULL,
+  inn INT NOT NULL,
+  ogrn INT NOT NULL,
+  phone_organization DECIAML,
+  email_organization VARCHAR (100) NOT NULL,
+  fio_leader VARCHAR (100) NOT NULL,
+  phone_leader DECIAML,
+  email_organization_leader VARCHAR (100) NOT NULL,
+  PRIMARY KEY (id_organization)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8; 
+
+CREATE TABLE activity
+(
+  id_activity INT NOT NULL AUTO_INCREMENT,	
+  event_name VARCHAR (100) NOT NULL,
+  location VARCHAR (100) NOT NULL,
+  start_date_and_time datetime,
+  end_date_and_time datetime,
+  event_agenda INT NOT NULL,
+  chairman_event VARCHAR (100) NOT NULL,
+  event_secretary VARCHAR (100) NOT NULL,
+  PRIMARY KEY (id_activity)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE orders 
+(
+  id_orders INT NOT NULL AUTO_INCREMENT,	
+  protocol_item_number REAL NOT NULL,
+  data_protokol date,
+  description_order text,
+  period_of_execution datetime,
+  responsible VARCHAR (100) NOT NULL,
+  execution_of_instructions VARCHAR (100) NOT NULL,
+  file VARCHAR (100) NOT NULL,
+  PRIMARY KEY (id_orders)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8; 
+
+CREATE TABLE authority 
+(
+  id_authority INT NOT NULL AUTO_INCREMENT,	
+  authority REAL NOT NULL,
+  name text,
+  PRIMARY KEY (id_authority)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE function_task 
+(
+  id_function_task INT NOT NULL AUTO_INCREMENT,	
+  authority REAL NOT NULL,
+  name text,
+  PRIMARY KEY (id_function_task)
+)
+ENGINE=InnoDB DEFAULT CHARSET=utf8; 

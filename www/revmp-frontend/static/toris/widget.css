@@ -1,0 +1,25 @@
+#nav_top {
+    display: none
+}
+
+.navbar-fixed-top, .navbar-static-top {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.widget-body .navbar {
+    border: none !important;
+}
+
+div.border-bottom {
+    border: none !important;
+}
+
+.navbar-right {
+    float: right !important;
+    margin-right: -15px;
+}
+
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
